@@ -105,9 +105,9 @@ class Mymodel():
     def model(self,x_train,time_length):
         input_tensor=Input((x_train.shape[1],))
         x = input_tensor
-        x = Dense(24, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)
-        x = Dense(16, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)
-        x = Dense(6, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)
+        x = Dense(25, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)#24
+        x = Dense(15, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)#16
+        x = Dense(5, activation='sigmoid', kernel_regularizer=L1L2(l1=0., l2=0.))(x)#6
         # x = Dropout(dropout, name='dropout')(x)
 
         prepare_list = {}
